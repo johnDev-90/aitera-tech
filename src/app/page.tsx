@@ -1,17 +1,19 @@
 import Image from "next/image";
 import Navbar from "./components/Navbar";
+import Hero from "./components/Hero";
 
 export default function Home() {
   return (
-      <div className="bg-[#ffffff] w-full pr-2 pl-2">
+      <div className="bg-[#ffffff] w-full">
          <header>
            <Navbar />
          </header>
-         <main>
+         <main className="pt-4">
+          <Hero />
 
          </main>
          <footer>
-          
+
          </footer>
        </div>
   );
