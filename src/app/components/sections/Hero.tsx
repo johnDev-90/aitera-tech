@@ -16,10 +16,10 @@ const Hero = () => {
         </h1>
 
         <div className="w-full pt-4">
-          <p className="text-3xl leading-10 font-serif">
-            ¿Listo para hacer crecer tu negocio? Desarrollamos plataformas y
-            aplicaciones digitales que te ayudan a generar ingresos y escalar de
-            forma sostenible.
+          <p className="text-3xl">¿Listo para hacer crecer tu negocio?</p>
+          <p className="text-2xl font-serif pt-4">
+            Desarrollamos plataformas y aplicaciones digitales que te ayudan a
+            generar ingresos y escalar de forma sostenible.
           </p>
         </div>
 
