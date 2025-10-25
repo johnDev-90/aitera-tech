@@ -12,7 +12,7 @@ export default function Home() {
   const [scrolling, setScruling] = useState<boolean>();
 
   return (
-    <div className="bg-[#ffffff] w-full">
+    <div className="bg-[#ffffff] w-full max-w-full mx-auto px-6">
       <header>
         <Navbar />
       </header>
@@ -20,7 +20,7 @@ export default function Home() {
         <Hero />
         <Solutions />
 
-        <Footer />
+      
       </main>
       <footer></footer>
     </div>

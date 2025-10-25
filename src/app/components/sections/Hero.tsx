@@ -23,17 +23,20 @@ const Hero = () => {
           </p>
         </div>
 
+
+
+
         <ButtonCta2 text={"Cotiza Gratis"} />
       </div>
 
-      <div className="w-full h-full flex justify-center items-center">
+      <div className="w-full h-full flex justify-center items-center ">
         <Image
-          src="/heroBG.avif"
+          src="/heroBG2.jpg"
           alt="Device mockup"
           width={400}
           height={700}
           priority
-          className="bg-cover w-full rounded-3xl shadow-md shadow-cyan-700"
+          className="bg-cover w-full rounded-3xl shadow-cyan-700 bg-white/10 backdrop-blur-md border border-white/20 shadow-lg"
         />
       </div>
     </section>

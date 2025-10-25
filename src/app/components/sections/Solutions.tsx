@@ -4,6 +4,7 @@ import React from "react";
 import TimeLine from "../ui/TimeLine";
 import { useState } from "react";
 import { ParagrhapTypes } from "@/app/types/types";
+import Image from "next/image";
 
 let paraghrapText = [
   {
@@ -36,13 +37,20 @@ const Solutions = () => {
   const [textArray, setTextArray] = useState<ParagrhapTypes>(paraghrapText);
 
   return (
-    <div className="w-full h-screen pt-16">
-      <div className="w-full flex justify-center" id="solutions">
-        <div className="w-[50%] h-full p-8 font-sans text-3xl">
-          <h2 className="leading-10 font-bold">
+    <div className="w-full h-screen pt-16 ">
+      <div className="w-full flex justify-center gap-16 items-center" id="solutions">
+        <Image
+        src={'/section.png'}
+         alt="Device mockup"
+          width={400}
+          height={400}
+          className="pt-16"
+        />
+        <div className="w-[50%] h-full pr-16 text-justify pl-16 font-sans">
+          <h2 className="leading-10 font-bold text-3xl">
             Convierte tu idea en un prototipo:
           </h2>
-          <p className="leading-10 text-cyan-700 font-bold">
+          <p className="leading-10 text-cyan-700 font-bold text-3xl">
             ¡solo 5 pasos sencillos!
           </p>
 
