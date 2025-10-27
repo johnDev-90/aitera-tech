@@ -38,10 +38,13 @@ const Solutions = () => {
 
   return (
     <div className="w-full h-screen pt-16 ">
-      <div className="w-full flex justify-center gap-16 items-center" id="solutions">
+      <div
+        className="w-full flex justify-center gap-16 items-center"
+        id="solutions"
+      >
         <Image
-        src={'/section.png'}
-         alt="Device mockup"
+          src={"/section.png"}
+          alt="Device mockup"
           width={400}
           height={400}
           className="pt-16"

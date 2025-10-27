@@ -23,9 +23,6 @@ const Hero = () => {
           </p>
         </div>
 
-
-
-
         <ButtonCta2 text={"Cotiza Gratis"} />
       </div>
 

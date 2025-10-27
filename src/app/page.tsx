@@ -1,4 +1,5 @@
 "use client";
+import ContactUs from "./components/sections/ContactUs";
 
 import Image from "next/image";
 import Navbar from "./components/Navbar";
@@ -18,9 +19,12 @@ export default function Home() {
       </header>
       <main className="pt-4">
         <Hero />
-        <Solutions />
 
-      
+        <div className="pt-16 pb-16">
+          <Solutions />
+        </div>
+
+        <ContactUs />
       </main>
       <footer></footer>
     </div>
