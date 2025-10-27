@@ -1,17 +1,11 @@
 "use client";
 import ContactUs from "./components/sections/ContactUs";
-
-import Image from "next/image";
 import Navbar from "./components/Navbar";
 import Hero from "./components/sections/Hero";
 import Solutions from "./components/sections/Solutions";
 import Footer from "./components/ui/Footer";
 
-import { useState } from "react";
-
 export default function Home() {
-  const [scrolling, setScruling] = useState<boolean>();
-
   return (
     <div className="bg-[#ffffff] w-full max-w-full mx-auto px-6">
       <header>
@@ -26,7 +20,9 @@ export default function Home() {
 
         <ContactUs />
       </main>
-      <footer></footer>
+      <footer>
+        <Footer />
+      </footer>
     </div>
   );
 }

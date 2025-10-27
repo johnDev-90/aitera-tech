@@ -2,15 +2,15 @@ import React from "react";
 import { ParagrhapTypes } from "@/app/types/types";
 
 type PropsType = {
-  textArray: ParagrhapTypes;
+  paraghrapText: ParagrhapTypes;
 };
 
-const TimeLine = ({ textArray }: PropsType) => {
+const TimeLine = ({ paraghrapText }: PropsType) => {
   return (
     <div className="p-4 flex justify-center w-full items-center">
       <ol className="items-center w-full p-16  sm:flex">
-        {textArray &&
-          textArray.map((p, index) => (
+        {paraghrapText &&
+          paraghrapText.map((p, index) => (
             <li key={index} className="relative mb-6 sm:mb-0">
               <div className="flex items-center">
                 <div className="z-10 flex items-center justify-center  p-2 w-7 h-7 bg-blue-100 rounded-full ring-0 ring-white dark:bg-cyan-700 sm:ring-8  shrink-0">

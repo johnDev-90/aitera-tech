@@ -1,5 +1,4 @@
 import React from "react";
-import DBimg from "/public/DB.webp";
 import Image from "next/image";
 import ButtonCta2 from "../ui/ButtonCta2";
 

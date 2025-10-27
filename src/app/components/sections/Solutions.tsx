@@ -2,11 +2,9 @@
 
 import React from "react";
 import TimeLine from "../ui/TimeLine";
-import { useState } from "react";
-import { ParagrhapTypes } from "@/app/types/types";
 import Image from "next/image";
 
-let paraghrapText = [
+const paraghrapText = [
   {
     title: "Llamada inicial",
     textContent: "Conoce tus necesidades y objetivos.",
@@ -34,8 +32,6 @@ let paraghrapText = [
 ];
 
 const Solutions = () => {
-  const [textArray, setTextArray] = useState<ParagrhapTypes>(paraghrapText);
-
   return (
     <div className="w-full h-screen pt-16 ">
       <div
@@ -64,7 +60,7 @@ const Solutions = () => {
         </div>
       </div>
 
-      <TimeLine textArray={textArray} />
+      <TimeLine paraghrapText={paraghrapText} />
     </div>
   );
 };
