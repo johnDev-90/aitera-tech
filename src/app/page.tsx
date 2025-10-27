@@ -3,6 +3,7 @@ import ContactUs from "./components/sections/ContactUs";
 import Navbar from "./components/Navbar";
 import Hero from "./components/sections/Hero";
 import Solutions from "./components/sections/Solutions";
+import Services from "./components/sections/Services";
 import Footer from "./components/ui/Footer";
 
 export default function Home() {
@@ -17,6 +18,7 @@ export default function Home() {
         <div className="pt-16 pb-16">
           <Solutions />
         </div>
+        <Services />
 
         <ContactUs />
       </main>
