@@ -15,9 +15,8 @@ export default function Home() {
       <main className="pt-4">
         <Hero />
 
-        <div className="pt-16 pb-16">
-          <Solutions />
-        </div>
+        <Solutions />
+
         <Services />
 
         <ContactUs />
