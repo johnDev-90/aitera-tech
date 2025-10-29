@@ -13,7 +13,7 @@ const TimeLine = ({ paraghrapText }: PropsType) => {
           paraghrapText.map((p, index) => (
             <li key={index} className="relative mb-6 sm:mb-0">
               <div className="flex items-center">
-                <div className="z-10 flex items-center justify-center  p-2 w-7 h-7 bg-blue-100 rounded-full ring-0 ring-white dark:bg-cyan-700 sm:ring-8  shrink-0">
+                <div className="z-10 flex items-center justify-center  p-2 w-15 h-15 bg-blue-100 rounded-full ring-0 ring-white dark:bg-cyan-700  sm:ring-8  shrink-0">
                   <span className="text-white font-bold text-lg">
                     {index + 1}
                   </span>
@@ -21,8 +21,8 @@ const TimeLine = ({ paraghrapText }: PropsType) => {
                 <div className="hidden sm:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700"></div>
               </div>
               <div className="pt-2">
-                <h3 className="text-base font-serif font-bold">{p.title}</h3>
-                <p className="font-serif text-base leading-none pt-2">
+                <h3 className="text-base font-semibold">{p.title}</h3>
+                <p className="font-light text-lg leading-none pt-2">
                   {p.textContent}
                 </p>
               </div>

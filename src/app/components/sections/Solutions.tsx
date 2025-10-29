@@ -3,33 +3,7 @@
 import React from "react";
 import TimeLine from "../ui/TimeLine";
 import Image from "next/image";
-
-const paraghrapText = [
-  {
-    title: "Llamada inicial",
-    textContent: "Conoce tus necesidades y objetivos.",
-  },
-
-  {
-    title: "Lista de funcionalidades",
-    textContent: "Definimos lo que tu prototipo debe incluir..",
-  },
-
-  {
-    title: "Moodboard visual",
-    textContent: "Inspiración y estilo para tu proyecto.",
-  },
-
-  {
-    title: "Diseño del proceso",
-    textContent: "Organizamos la experiencia paso a paso.",
-  },
-
-  {
-    title: "Prototipo interactivo",
-    textContent: "Tu idea toma forma y se puede probar.",
-  },
-];
+import { paraghrapText } from "../data/SolutionsData";
 
 const Solutions = () => {
   return (
@@ -41,19 +15,19 @@ const Solutions = () => {
         <Image
           src={"/section.png"}
           alt="Device mockup"
-          width={400}
-          height={400}
+          width={300}
+          height={300}
           className="pt-16"
         />
-        <div className="w-[50%] h-full pr-16 text-justify pl-16 font-sans">
-          <h2 className="leading-10 font-bold text-3xl">
+        <div className="w-[50%] h-full pr-16 text-justify pl-16 font-light">
+          <h2 className="leading-10 font-semibold text-3xl">
             Convierte tu idea en un prototipo:
           </h2>
-          <p className="leading-10 text-cyan-700 font-bold text-3xl">
+          <p className="leading-10 text-cyan-700 font-semibold text-3xl">
             ¡solo 5 pasos sencillos!
           </p>
 
-          <p className="leading-7 text-xl font-serif pt-2">
+          <p className="leading-7 text-xl pt-2 font-light">
             Sin discusiones innecesarias ni retrasos en el proyecto, Nuestro
             flujo de trabajo de prototipado está optimizado:
           </p>
