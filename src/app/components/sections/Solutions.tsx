@@ -17,7 +17,7 @@ const Solutions = () => {
           alt="Device mockup"
           width={300}
           height={300}
-          className=" lg:pt-16"
+          className="pt-16 lg:pt-16"
         />
         <div className="w-full lg:w-[50%] h-full lg:pr-16 lg:text-justify lg:pl-16 font-light">
           <h2 className="leading-10 font-semibold text-3xl">
