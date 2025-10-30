@@ -7,9 +7,9 @@ import { paraghrapText } from "../data/SolutionsData";
 
 const Solutions = () => {
   return (
-    <div className="w-full h-screen pt-16 ">
+    <div className="w-full h-screen lg:pt-16 ">
       <div
-        className="w-full flex justify-center gap-16 items-center"
+        className="w-full lg:flex lg:justify-center lg:gap-16 lg:items-center"
         id="solutions"
       >
         <Image
@@ -17,9 +17,9 @@ const Solutions = () => {
           alt="Device mockup"
           width={300}
           height={300}
-          className="pt-16"
+          className=" lg:pt-16"
         />
-        <div className="w-[50%] h-full pr-16 text-justify pl-16 font-light">
+        <div className="w-full lg:w-[50%] h-full lg:pr-16 lg:text-justify lg:pl-16 font-light">
           <h2 className="leading-10 font-semibold text-3xl">
             Convierte tu idea en un prototipo:
           </h2>

@@ -5,7 +5,7 @@ import ButtonCta1 from "./ui/ButtonCta1";
 const Navbar = () => {
   return (
     <nav className="w-full fixed top-0 left-0 bg-white/80 backdrop-blur-sm shadow-sm z-50">
-      <div className="max-w-7xl mx-auto flex items-center justify-between h-20 px-6 font-sans">
+      <div className=" hidden max-w-7xl mx-auto md:flex items-center justify-between h-20 px-6 font-sans">
         <Image
           src="/logo.png"
           alt="logo"
