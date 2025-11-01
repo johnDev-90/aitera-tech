@@ -26,14 +26,14 @@ const NavbartMobile = ({ setToggle, toggle }: NavarProps) => {
           href="#home"
           className="hover:text-cyan-700"
         >
-          Home
+          Inicio
         </a>
         <a
           onClick={(e) => setToggle(false)}
           href="#solutions"
           className="hover:text-cyan-700"
         >
-          Solutions
+          Soluciones
         </a>
 
         <a
@@ -45,17 +45,17 @@ const NavbartMobile = ({ setToggle, toggle }: NavarProps) => {
         </a>
         <a
           onClick={(e) => setToggle(false)}
-          href="#about"
+          href="#nosotros"
           className="hover:text-cyan-700"
         >
-          About Us
+          Nosotros
         </a>
         <a
           onClick={(e) => setToggle(false)}
           href="#contact"
           className="hover:text-cyan-700"
         >
-          Contact Us
+          Contactanos
         </a>
       </div>
     </nav>

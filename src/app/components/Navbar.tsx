@@ -42,20 +42,20 @@ const Navbar = ({ setToggle }: NavarProps) => {
 
         <div className="hidden md:flex gap-6 font-semibold">
           <a href="#home" className="hover:text-cyan-700">
-            Home
+            Inicio
           </a>
           <a href="#solutions" className="hover:text-cyan-700">
-            Solutions
+            Soluciones
           </a>
 
           <a href="#services" className="hover:text-cyan-700">
             Servicios
           </a>
-          <a href="#about" className="hover:text-cyan-700">
-            About Us
+          <a href="#nosotros" className="hover:text-cyan-700">
+            Nosotros
           </a>
           <a href="#contact" className="hover:text-cyan-700">
-            Contact Us
+            Contactanos
           </a>
         </div>
 

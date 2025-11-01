@@ -8,6 +8,7 @@ import Hero from "./components/sections/Hero";
 import Solutions from "./components/sections/Solutions";
 import Services from "./components/sections/Services";
 import Footer from "./components/ui/Footer";
+import AboutUs from "./components/sections/AboutUs";
 
 export default function Home() {
   const [toggle, setToggle] = useState<boolean>(false);
@@ -23,6 +24,7 @@ export default function Home() {
         <Solutions />
 
         <Services />
+        <AboutUs />
 
         <ContactUs />
       </main>
