@@ -4,7 +4,7 @@ import Link from "next/link";
 const IconesFooter = () => {
   return (
     <div>
-      <div className="w-full flex justify-center gap-16">
+      <div className="w-full grid grid-cols-2 md:flex justify-center gap-16">
         <Link className=" transition-all  " href={"#"}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
