@@ -12,7 +12,7 @@ const AboutUs = () => {
       </p>
 
       <div className="pt-8 lg:grid lg:grid-cols-2 lg:pt-16 ">
-        <div className="p-4 rounded-br-3xl bg-white">
+        <div data-aos="zoom-in" className="p-4 rounded-br-3xl bg-white">
           <p className="text-2xl text-purple-800">🧠 Quiénes somos</p>
 
           <p className="pt-4 text-lg font-light text-justify">
@@ -29,7 +29,7 @@ const AboutUs = () => {
           </p>
         </div>
 
-        <div className="p-4 ">
+        <div data-aos="zoom-in" className="p-4 ">
           <p className="text-2xl text-purple-800">💡 Nuestra misión</p>
 
           <p className="pt-4 text-lg font-light">
@@ -44,7 +44,7 @@ const AboutUs = () => {
           </p>
         </div>
 
-        <div className="p-4 ">
+        <div data-aos="zoom-in-up" className="p-4 ">
           <p className="text-2xl text-purple-800">⚙️ Cómo trabajamos</p>
 
           <p className="pt-4 text-lg font-light">
@@ -60,7 +60,7 @@ const AboutUs = () => {
           </p>
         </div>
 
-        <div className="p-4 ">
+        <div data-aos="zoom-in-up" className="p-4 ">
           <p className="text-2xl text-purple-800">
             🌍 Nuestra visión y valores
           </p>

@@ -7,7 +7,7 @@ import { paraghrapText } from "../data/SolutionsData";
 
 const Solutions = () => {
   return (
-    <div className="w-full h-screen lg:pt-16 ">
+    <div data-aos="fade-right" className="w-full h-screen lg:pt-16 ">
       <div
         className="w-full lg:flex lg:justify-center lg:gap-16 lg:items-center"
         id="solutions"

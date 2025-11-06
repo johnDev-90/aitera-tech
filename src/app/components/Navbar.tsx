@@ -21,7 +21,7 @@ const Navbar = ({ setToggle }: NavarProps) => {
         />
 
         <div
-          onClick={(e) => setToggle(true)}
+          onClick={() => setToggle(true)}
           className="w-full md:hidden flex justify-end p-4"
         >
           <svg

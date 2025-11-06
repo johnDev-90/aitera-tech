@@ -13,7 +13,10 @@ const ContactUs = () => {
         </p>
       </div>
 
-      <div className="w-full lg:w-[80%] mx-auto h-screen  lg:grid  lg:grid-cols-2 lg:justify-items-center gap-4">
+      <div
+        data-aos="zoom-out-down"
+        className="w-full lg:w-[80%] mx-auto h-screen  lg:grid  lg:grid-cols-2 lg:justify-items-center gap-4"
+      >
         <form
           action="#"
           method="POST"

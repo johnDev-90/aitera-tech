@@ -13,7 +13,7 @@ const NavbartMobile = ({ setToggle, toggle }: NavarProps) => {
     >
       <div className="w-full flex  justify-end p-4">
         <span
-          onClick={(e) => setToggle(false)}
+          onClick={() => setToggle(false)}
           className="font-bold text-3xl p-2 shadow cursor-pointer"
         >
           X
@@ -22,14 +22,14 @@ const NavbartMobile = ({ setToggle, toggle }: NavarProps) => {
 
       <div className=" w-full h-[35rem] text-xl p-8 flex flex-col justify-evenly gap-6 font-semibold">
         <a
-          onClick={(e) => setToggle(false)}
+          onClick={() => setToggle(false)}
           href="#home"
           className="hover:text-cyan-700"
         >
           Inicio
         </a>
         <a
-          onClick={(e) => setToggle(false)}
+          onClick={() => setToggle(false)}
           href="#solutions"
           className="hover:text-cyan-700"
         >
@@ -37,21 +37,21 @@ const NavbartMobile = ({ setToggle, toggle }: NavarProps) => {
         </a>
 
         <a
-          onClick={(e) => setToggle(false)}
+          onClick={() => setToggle(false)}
           href="#services"
           className="hover:text-cyan-700"
         >
           Servicios
         </a>
         <a
-          onClick={(e) => setToggle(false)}
+          onClick={() => setToggle(false)}
           href="#nosotros"
           className="hover:text-cyan-700"
         >
           Nosotros
         </a>
         <a
-          onClick={(e) => setToggle(false)}
+          onClick={() => setToggle(false)}
           href="#contact"
           className="hover:text-cyan-700"
         >

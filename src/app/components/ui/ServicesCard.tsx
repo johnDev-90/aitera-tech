@@ -8,7 +8,10 @@ type PropsType = {
 const ServicesCard = ({ item }: PropsType) => {
   const Logo = item.logo;
   return (
-    <div className="w-full rounded-2xl p-4 border border-gray-300 transition-all hover:shadow hover:shadow-cyan-700">
+    <div
+      data-aos="flip-left"
+      className="w-full rounded-2xl p-4 border border-gray-300 transition-all hover:shadow hover:shadow-cyan-700"
+    >
       <Logo className="size-15 bg-blue-500 p-2 text-white rounded-xl" />
 
       <div className="w-full pt-2 font-light">

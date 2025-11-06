@@ -7,7 +7,10 @@ type PropsType = {
 
 const TimeLine = ({ paraghrapText }: PropsType) => {
   return (
-    <div className="w-full p-4 flex justify-center items-center  lg:flex">
+    <div
+      data-aos="fade-left"
+      className="w-full p-4 flex justify-center items-center  lg:flex"
+    >
       <ol className="mt-16 w-full lg:mt-0 lg:items-center lg:w-full lg:p-16  lg:flex">
         {paraghrapText &&
           paraghrapText.map((p, index) => (
