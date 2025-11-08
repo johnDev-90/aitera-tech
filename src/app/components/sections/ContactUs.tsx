@@ -1,6 +1,56 @@
-import React from "react";
+'use client'
+
+import { useState } from "react";
+import { UserType } from "@/app/types/types";
+import { showToast } from "nextjs-toast-notify";
 
 const ContactUs = () => {
+
+  const [form, setForm] = useState<UserType>({firstName:'',email:'',message:''})
+
+
+
+
+
+async function handleSubmit(e: React.FormEvent) {
+  e.preventDefault();
+  
+  if(!Object.values(form).includes('')) {
+
+    const response = await fetch('/api/send',{
+      method:'POST',
+      headers:{
+        'Content-Type':'application/json',
+      },body:JSON.stringify(form)
+    });
+
+    const result = await response.json();
+
+    if (result.ok) {
+
+    showToast.success("¡Hemos recibido tu mensaje y nos pondremos en contacto contigo lo antes posible.!", {
+    duration: 4500,
+    progress: true,
+    position: "top-center",
+    transition: "bounceIn",
+    icon: '',
+    sound: true,
+  
+  });
+      
+    }
+
+
+
+
+
+  } 
+}
+
+
+
+
+
   return (
     <div id="contact" className="isolate  py-24 sm:py-32 ">
       <div className="mx-auto max-w-2xl text-center">
@@ -21,7 +71,10 @@ const ContactUs = () => {
           action="#"
           method="POST"
           className="w-full lg:w-[80%] lg:mx-auto p-8 mt-16  font-light"
+          onSubmit={(e) => handleSubmit(e)}
         >
+
+          
           <div className=" gap-y-6 sm:grid-cols-2">
             <div>
               <label htmlFor="first-name" className="block text-sm/6 ">
@@ -29,6 +82,8 @@ const ContactUs = () => {
               </label>
               <div className="mt-2.5">
                 <input
+                value={form.firstName}
+                onChange={(e) => setForm({...form, firstName:e.target.value})}
                   id="first-name"
                   name="first-name"
                   type="text"
@@ -44,6 +99,9 @@ const ContactUs = () => {
               </label>
               <div className="mt-2.5">
                 <input
+                required
+                value={form.email}
+                onChange={(e) => setForm({...form,email:e.target.value})}
                   id="email"
                   name="email"
                   type="email"
@@ -62,6 +120,8 @@ const ContactUs = () => {
               </label>
               <div className="mt-2.5">
                 <textarea
+                value={form.message}
+                 onChange={(e) => setForm({...form,message:e.target.value})}
                   id="message"
                   name="message"
                   rows={4}
@@ -73,6 +133,7 @@ const ContactUs = () => {
           </div>
           <div className="mt-10">
             <button
+           
               type="submit"
               className="block w-full rounded-md cursor-pointer px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-xs bg-gradient-to-r from-[#D6BBF2] via-[#3A238C] via-[#203573] via-[#1C818C] to-[#43D9CA] hover:shadow-md shadow-cyan-600 transition-all"
             >

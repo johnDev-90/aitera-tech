@@ -15,3 +15,9 @@ export type CardsContentTypes = {
   slogan: string;
   list: string[];
 };
+
+export type UserType = {
+  firstName:string;
+  email:string;
+  message:string
+}
