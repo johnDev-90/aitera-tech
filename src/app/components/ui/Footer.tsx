@@ -8,34 +8,29 @@ const Footer = () => {
       <div className="w-full hidden md:flex justify-center gap-16">
         <Link
           className="hover:text-cyan-700 font-semibold transition-all"
-          href={"#"}
+          href={"#inicio"}
         >
-          About
+          Inicio
         </Link>
         <Link
           className="hover:text-cyan-700 font-semibold transition-all"
-          href={"#"}
+          href={"#soluciones"}
         >
-          Blogs
+          Soluciones
         </Link>
         <Link
           className="hover:text-cyan-700 font-semibold transition-all"
-          href={"#"}
+          href={"#servicios"}
         >
-          Jobs
+          Servicios
         </Link>
         <Link
           className="hover:text-cyan-700 font-semibold transition-all"
-          href={"#"}
+          href={"#nosotros"}
         >
-          Press
+          Nosotros
         </Link>
-        <Link
-          className="hover:text-cyan-700 font-semibold transition-all"
-          href={"#"}
-        >
-          Accessibility
-        </Link>
+     
       </div>
 
       <IconesFooter />

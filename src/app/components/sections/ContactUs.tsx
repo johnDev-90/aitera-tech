@@ -1,55 +1,45 @@
-'use client'
+"use client";
 
 import { useState } from "react";
 import { UserType } from "@/app/types/types";
 import { showToast } from "nextjs-toast-notify";
 
 const ContactUs = () => {
-
-  const [form, setForm] = useState<UserType>({firstName:'',email:'',message:''})
-
-
-
-
-
-async function handleSubmit(e: React.FormEvent) {
-  e.preventDefault();
-  
-  if(!Object.values(form).includes('')) {
-
-    const response = await fetch('/api/send',{
-      method:'POST',
-      headers:{
-        'Content-Type':'application/json',
-      },body:JSON.stringify(form)
-    });
-
-    const result = await response.json();
-
-    if (result.ok) {
-
-    showToast.success("¡Hemos recibido tu mensaje y nos pondremos en contacto contigo lo antes posible.!", {
-    duration: 4500,
-    progress: true,
-    position: "top-center",
-    transition: "bounceIn",
-    icon: '',
-    sound: true,
-  
+  const [form, setForm] = useState<UserType>({
+    firstname: "",
+    email: "",
+    message: "",
   });
-      
+
+  async function handleSubmit(e: React.FormEvent) {
+    e.preventDefault();
+
+    if (!Object.values(form).includes("")) {
+      const response = await fetch("/api/send", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(form),
+      });
+
+      const result = await response.json();
+
+      if (result.ok) {
+        showToast.success(
+          "¡Gracias por tu mensaje. Nos pondremos en contacto contigo lo antes posible.!",
+          {
+            duration: 4500,
+            progress: true,
+            position: "top-center",
+            transition: "bounceIn",
+            icon: "",
+            sound: true,
+          },
+        );
+      }
     }
-
-
-
-
-
-  } 
-}
-
-
-
-
+  }
 
   return (
     <div id="contact" className="isolate  py-24 sm:py-32 ">
@@ -63,18 +53,14 @@ async function handleSubmit(e: React.FormEvent) {
         </p>
       </div>
 
-      <div
-        data-aos="zoom-out-down"
-        className="w-full lg:w-[80%] mx-auto h-screen  lg:grid  lg:grid-cols-2 lg:justify-items-center gap-4"
-      >
+      <div className="w-full lg:w-[80%] mx-auto h-screen  lg:grid  lg:grid-cols-2 lg:justify-items-center gap-4">
         <form
+          data-aos="fade-right"
           action="#"
           method="POST"
           className="w-full lg:w-[80%] lg:mx-auto p-8 mt-16  font-light"
           onSubmit={(e) => handleSubmit(e)}
         >
-
-          
           <div className=" gap-y-6 sm:grid-cols-2">
             <div>
               <label htmlFor="first-name" className="block text-sm/6 ">
@@ -82,8 +68,10 @@ async function handleSubmit(e: React.FormEvent) {
               </label>
               <div className="mt-2.5">
                 <input
-                value={form.firstName}
-                onChange={(e) => setForm({...form, firstName:e.target.value})}
+                  value={form.firstname}
+                  onChange={(e) =>
+                    setForm({ ...form, firstname: e.target.value })
+                  }
                   id="first-name"
                   name="first-name"
                   type="text"
@@ -99,9 +87,9 @@ async function handleSubmit(e: React.FormEvent) {
               </label>
               <div className="mt-2.5">
                 <input
-                required
-                value={form.email}
-                onChange={(e) => setForm({...form,email:e.target.value})}
+                  required
+                  value={form.email}
+                  onChange={(e) => setForm({ ...form, email: e.target.value })}
                   id="email"
                   name="email"
                   type="email"
@@ -120,8 +108,10 @@ async function handleSubmit(e: React.FormEvent) {
               </label>
               <div className="mt-2.5">
                 <textarea
-                value={form.message}
-                 onChange={(e) => setForm({...form,message:e.target.value})}
+                  value={form.message}
+                  onChange={(e) =>
+                    setForm({ ...form, message: e.target.value })
+                  }
                   id="message"
                   name="message"
                   rows={4}
@@ -133,7 +123,6 @@ async function handleSubmit(e: React.FormEvent) {
           </div>
           <div className="mt-10">
             <button
-           
               type="submit"
               className="block w-full rounded-md cursor-pointer px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-xs bg-gradient-to-r from-[#D6BBF2] via-[#3A238C] via-[#203573] via-[#1C818C] to-[#43D9CA] hover:shadow-md shadow-cyan-600 transition-all"
             >
@@ -142,7 +131,10 @@ async function handleSubmit(e: React.FormEvent) {
           </div>
         </form>
 
-        <div className="w-full  sm:h-full  md:flex md:flex-col gap-8 pt-30 font-light text-xl">
+        <div
+          data-aos="fade-left"
+          className="w-full  sm:h-full  md:flex md:flex-col gap-8 pt-30 font-light text-xl"
+        >
           <div className="flex flex-col gap-8">
             <div className="w-full flex gap-4 items-center">
               <svg
@@ -166,7 +158,7 @@ async function handleSubmit(e: React.FormEvent) {
                   Hablar directamente con un miembro de nuestro equipo.
                 </p>
                 <span className="text-base  font-normal text-purple-800">
-                  +(503) 7295-2715
+                  +(503) 77329953
                 </span>
               </div>
             </div>
@@ -194,7 +186,7 @@ async function handleSubmit(e: React.FormEvent) {
                   Hablar directamente con un miembro de nuestro equipo.
                 </p>
                 <span className="text-base  font-normal text-purple-800">
-                  +(503) 7295-2715
+                  +(503) 77329953
                 </span>
               </div>
             </div>

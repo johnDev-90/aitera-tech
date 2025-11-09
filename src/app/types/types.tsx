@@ -17,7 +17,7 @@ export type CardsContentTypes = {
 };
 
 export type UserType = {
-  firstName:string;
-  email:string;
-  message:string
-}
+  firstname: string;
+  email: string;
+  message: string;
+};
