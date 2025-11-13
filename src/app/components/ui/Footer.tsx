@@ -1,11 +1,11 @@
 import React from "react";
 import Link from "next/link";
-import IconesFooter from "./IconesFooter";
+// import IconesFooter from "./IconesFooter";
 
 const Footer = () => {
   return (
-    <footer className="w-full flex flex-col justify-around items-center mt-55 md:p-8 md:mt-0 md:flex md:flex-col md:justify-center md:gap-8 h-80 bg-gray-100  ">
-      <div className="w-full hidden md:flex justify-center gap-16">
+    <footer className="w-full flex flex-col justify-around items-center pt-20 md:p-8 md:mt-0 md:flex md:flex-col md:justify-center md:gap-8 h-70 bg-gray-50  ">
+      {/* <div className="w-full hidden md:flex justify-center gap-16">
         <Link
           className="hover:text-cyan-700 font-semibold transition-all"
           href={"#inicio"}
@@ -33,7 +33,7 @@ const Footer = () => {
      
       </div>
 
-      <IconesFooter />
+      <IconesFooter /> */}
 
       <div className="w-full flex  justify-center">
         <p className="">© 2024 Aitera Tech. All rights reserved.</p>

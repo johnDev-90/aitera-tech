@@ -39,6 +39,15 @@ const ContactUs = () => {
         );
       }
     }
+
+    showToast.error("¡Debes llenar todos los campos!", {
+      duration: 4500,
+      progress: true,
+      position: "top-center",
+      transition: "bounceIn",
+      icon: "",
+      sound: true,
+    });
   }
 
   return (
@@ -55,7 +64,7 @@ const ContactUs = () => {
 
       <div className="w-full lg:w-[80%] mx-auto h-screen  lg:grid  lg:grid-cols-2 lg:justify-items-center gap-4">
         <form
-          data-aos="fade-right"
+          data-aos="zoom-in"
           action="#"
           method="POST"
           className="w-full lg:w-[80%] lg:mx-auto p-8 mt-16  font-light"
@@ -87,7 +96,6 @@ const ContactUs = () => {
               </label>
               <div className="mt-2.5">
                 <input
-                  required
                   value={form.email}
                   onChange={(e) => setForm({ ...form, email: e.target.value })}
                   id="email"
@@ -132,7 +140,7 @@ const ContactUs = () => {
         </form>
 
         <div
-          data-aos="fade-left"
+          data-aos="zoom-in"
           className="w-full  sm:h-full  md:flex md:flex-col gap-8 pt-30 font-light text-xl"
         >
           <div className="flex flex-col gap-8">

@@ -6,7 +6,7 @@ const Hero = () => {
   return (
     <section
       data-aos="fade-up"
-      className="w-full h-full mt-40 lg:grid grid-cols-2 font-sans lg:mt-16 lg:w-full lg:h-full lg:text-6xl flex flex-col justify-center lg:p-12"
+      className="w-full h-full pt-30 lg:grid grid-cols-2 font-sans lg:mt-16 lg:w-full lg:h-full lg:text-6xl flex flex-col justify-center lg:p-12"
       id="home"
     >
       <div className="w-full h-full text-3xl md:text-5xl lg:text-6xl md:flex md:flex-col md:justify-center md:p-8">

@@ -3,10 +3,7 @@ import { cardContent } from "../data/serviceCardData";
 
 const Services = () => {
   return (
-    <section
-      id="services"
-      className="pt-200 sm:pt-140 w-full h-full md:pt-80 lg:pt-16 lg:p-8"
-    >
+    <section id="services" className="pt-25 w-full h-full md:pt-80 lg:pt-16">
       <div className="md:p-8 text-lg font-light">
         <h2 className="text-cyan-700 text-center font-semibold text-2xl md:text-3xl">
           Nuestros Servicios

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { DM_Sans, Crimson_Text } from "next/font/google";
 import AOSprovider from "./components/AOSprovider";
+import WhatsAppFloating from "./components/ui/WhatsAppFloating";
 
 const dmSans = DM_Sans({
   subsets: ["latin"],
@@ -35,6 +36,7 @@ export default function RootLayout({
         className={`${dmSans.variable} ${crimsonText.variable} antialiased overflow-x-hidden`}
       >
         <AOSprovider>{children}</AOSprovider>
+        <WhatsAppFloating />
       </body>
     </html>
   );
