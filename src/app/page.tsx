@@ -655,7 +655,7 @@ export default function Home() {
             </span>
             aitera<small style={{ marginLeft: "4px" }}>TECH</small>
           </a>
-          <p>© 2024 Aitera Tech. Todos los derechos reservados.</p>
+          <p>© 2024 Aitera Tech. Todos los derechos reservados. <span className="mono" style={{fontSize:'0.75rem', color:'var(--muted)'}}>v1.0</span></p>
         </div>
       </footer>
 
