@@ -166,7 +166,7 @@ const ContactUs = () => {
                   Hablar directamente con un miembro de nuestro equipo.
                 </p>
                 <span className="text-base  font-normal text-purple-800">
-                  +(503) 77329953
+                  +(503) 60244779
                 </span>
               </div>
             </div>
@@ -194,7 +194,7 @@ const ContactUs = () => {
                   Hablar directamente con un miembro de nuestro equipo.
                 </p>
                 <span className="text-base  font-normal text-purple-800">
-                  +(503) 77329953
+                  +(503) 60244779
                 </span>
               </div>
             </div>

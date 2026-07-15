@@ -1,25 +1,10 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { DM_Sans, Crimson_Text } from "next/font/google";
-import AOSprovider from "./components/AOSprovider";
-import WhatsAppFloating from "./components/ui/WhatsAppFloating";
-
-const dmSans = DM_Sans({
-  subsets: ["latin"],
-  weight: ["300", "500", "700"],
-  variable: "--font-dm-sans",
-});
-
-const crimsonText = Crimson_Text({
-  subsets: ["latin"],
-  weight: ["400", "600", "700"],
-  variable: "--font-crimson-text",
-});
 
 export const metadata: Metadata = {
-  title: "Aitera Tech",
+  title: "Aitera Tech — Software que convierte ideas en producto",
   description:
-    "Creamos soluciones digitales personalizadas: desarrollo web, apps, diseño UX/UI y automatización. Aumenta la eficiencia y escala tu negocio con tecnología.",
+    "Diseñamos y construimos plataformas, apps y automatizaciones a la medida. De la idea al prototipo en 5 pasos.",
   icons: {
     icon: "/logo.svg",
   },
@@ -31,13 +16,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="scroll-smooth">
-      <body
-        className={`${dmSans.variable} ${crimsonText.variable} antialiased overflow-x-hidden`}
-      >
-        <AOSprovider>{children}</AOSprovider>
-        <WhatsAppFloating />
-      </body>
+    <html lang="es">
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+          rel="stylesheet"
+        />
+      </head>
+      <body>{children}</body>
     </html>
   );
 }
