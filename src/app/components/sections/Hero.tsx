@@ -1,8 +1,11 @@
 import React from "react";
 import Image from "next/image";
 import ButtonCta2 from "../ui/ButtonCta2";
+import { useTranslations } from "next-intl";
+
 
 const Hero = () => {
+  const t =  useTranslations('HomePage')
   return (
     <section
       data-aos="fade-up"
@@ -20,8 +23,7 @@ const Hero = () => {
             ¿Listo para hacer crecer tu negocio?
           </p>
           <p className=" text-center text-xl mt-5   md:text-2xl md:text-left font-serif md:pt-4">
-            Desarrollamos plataformas y aplicaciones digitales que te ayudan a
-            generar ingresos y escalar de forma sostenible.
+            {t("Desarrollamos plataformas y aplicaciones digitales que te ayudan a generar ingresos y escalar de forma sostenible.")}
           </p>
         </div>
 

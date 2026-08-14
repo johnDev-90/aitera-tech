@@ -1,5 +1,10 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { NextIntlClientProvider } from "next-intl";
+
+type Prosp = {
+  children: React.ReactNode;
+}
 
 export const metadata: Metadata = {
   title: "Aitera Tech — Software que convierte ideas en producto",
@@ -25,7 +30,9 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body>{children}</body>
+      <body>
+        <NextIntlClientProvider>{children}</NextIntlClientProvider>
+      </body>
     </html>
   );
 }
