@@ -2,7 +2,16 @@
 
 import { useEffect } from "react";
 
-export default function Home() {
+import { useTranslations } from 'next-intl';
+
+
+
+
+export default  function  Home() {
+
+  const t =  useTranslations('HomePage')
+
+  
   useEffect(() => {
     const header = document.getElementById("siteHeader");
     const handleScroll = () => {
@@ -136,7 +145,7 @@ export default function Home() {
           </a>
           <ul className="navlinks" id="navLinks">
             <li>
-              <a href="#home">Inicio</a>
+              <a href="#home">{t('Inicio')}</a>
             </li>
             <li>
               <a href="#solutions">Proceso</a>
@@ -180,9 +189,7 @@ export default function Home() {
                 digital que funciona.
               </h1>
               <p>
-                Diseñamos y programamos sitios, apps y automatizaciones a la
-                medida de tu operación. Sin vueltas, sin retrasos: una señal
-                clara desde el primer llamado hasta el último deploy.
+                {t("disenamos")}
               </p>
               <div className="hero-ctas">
                 <a href="#contact" className="btn btn-primary">
