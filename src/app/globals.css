@@ -122,6 +122,20 @@ nav{
 
 .menu-toggle{ display:none; background:none; border:none; color:var(--ink); font-size:1.4rem; cursor:pointer; }
 
+.nav-right{ display:flex; align-items:center; gap:16px; }
+
+.lang-switcher{
+  display:flex; align-items:center; gap:2px;
+  padding:3px; border:1px solid var(--line); border-radius:999px;
+}
+.lang-btn{
+  font-family:'JetBrains Mono', monospace; font-size:0.72rem; font-weight:600; letter-spacing:0.04em;
+  color:var(--muted); background:none; border:none; border-radius:999px;
+  padding:5px 11px; cursor:pointer; transition: color .2s ease, background .2s ease;
+}
+.lang-btn:hover{ color:var(--ink); }
+.lang-btn.active{ color:#06070a; background:var(--grad); }
+
 /* sections shared */
 section{ position:relative; z-index:1; }
 .eyebrow{

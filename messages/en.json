@@ -1,10 +1,152 @@
 {
-  "HomePage": {
-    "Inicio": "Home",
-    "Proceso": "Process",
-    "Servicios": "Services",
-    "Nosotros": "About Us",
-    "Contacto": "Contact",
-    "disenamos": "We design and develop custom websites, apps, and automations tailored to your operations. No hassle, no delays—just clear communication from the first call to the final deployment."
+  "Nav": {
+    "home": "Home",
+    "process": "Process",
+    "services": "Services",
+    "about": "About",
+    "contact": "Contact",
+    "cta": "Let's talk",
+    "menuAriaLabel": "Open menu"
+  },
+  "Whatsapp": {
+    "message": "Hi, I'd like more information",
+    "chatAriaLabel": "Chat on WhatsApp"
+  },
+  "Hero": {
+    "location": "Software studio · El Salvador",
+    "titlePart1": "We turn",
+    "titleHighlight": "ideas",
+    "titlePart2": "into digital products that work.",
+    "description": "We design and develop custom websites, apps, and automations tailored to your operations. No hassle, no delays—just clear communication from the first call to the final deploy.",
+    "ctaPrimary": "Get a free quote →",
+    "ctaWhatsapp": "Chat on WhatsApp",
+    "tag1": "Tailored design",
+    "tag2": "Prototype in 5 steps",
+    "tag3": "Close support",
+    "code": {
+      "line1Label": "idea",
+      "line1Method": "define",
+      "line1Arg": "goal",
+      "line2Label": "scope",
+      "line2Method": "build",
+      "line2Arg": "prototype",
+      "line3Label": "product",
+      "line3Method": "launch",
+      "chipA": "Deploy ready",
+      "chipB": "UX validated"
+    }
+  },
+  "Process": {
+    "eyebrow": "How we work",
+    "title": "From idea to prototype, in five steps with no background noise.",
+    "subtitle": "Every project follows the same signal: clear, measurable, and free of unnecessary discussions that delay launch.",
+    "steps": [
+      {
+        "title": "Kickoff call",
+        "desc": "We listen to your vision and translate the real business problem into a concrete goal."
+      },
+      {
+        "title": "Feature map",
+        "desc": "We turn that vision into a clear scope: what's included in the project and what's out."
+      },
+      {
+        "title": "Visual direction",
+        "desc": "Moodboard, tone, and style: the visual language your brand needs to look the way it feels."
+      },
+      {
+        "title": "Experience architecture",
+        "desc": "We design every screen and every user decision, step by step, with no loose ends."
+      },
+      {
+        "title": "Interactive prototype",
+        "desc": "Your idea takes real shape: something you can touch, test, and approve before we build it out."
+      }
+    ]
+  },
+  "Services": {
+    "eyebrow": "Services",
+    "title": "Everything your digital presence needs, in a single team.",
+    "subtitle": "Development, design, and integration working as one system, not as scattered pieces.",
+    "cards": [
+      {
+        "title": "Websites",
+        "desc": "Sites that load fast, rank well, and turn visits into customers. Responsive design from end to end.",
+        "items": ["Built from scratch", "Redesign of existing sites", "Speed and SEO optimization", "100% responsive design"]
+      },
+      {
+        "title": "Custom web apps",
+        "desc": "Software built for your real operation: internal dashboards, client portals, and workflows you still do by hand.",
+        "items": ["Internal management apps", "Portals for end clients", "Custom features", "Architecture built to scale"]
+      },
+      {
+        "title": "Integrations",
+        "desc": "We connect the tools you already use so they work as a single system, with no friction.",
+        "items": ["Electronic invoicing", "Shopify connection", "External APIs", "System synchronization"]
+      },
+      {
+        "title": "Design and strategy",
+        "desc": "UX/UI, conversion strategy, and digital consulting so every decision has a purpose.",
+        "items": ["Graphic design and UX/UI", "Marketing optimization", "Conversion strategies", "Digital consulting"]
+      }
+    ]
+  },
+  "About": {
+    "eyebrow": "Who we are",
+    "title": "Technology should be an ally, not a barrier.",
+    "subtitle": "We create digital solutions designed to simplify processes, improve productivity, and take businesses to their next level — with strategic vision and a human approach.",
+    "cells": [
+      {
+        "eyebrow": "Our mission",
+        "title": "Tools that actually get used",
+        "desc": "We build accessible, secure, and scalable technology that helps our clients grow, with attention to detail in every delivery."
+      },
+      {
+        "eyebrow": "How we work",
+        "title": "With you, from start to finish",
+        "desc": "We build long-term relationships based on trust. Agile methodologies and constant communication, from idea to implementation."
+      },
+      {
+        "eyebrow": "Our vision",
+        "title": "A regional benchmark",
+        "desc": "We want to be a benchmark in innovative digital solutions, with transparency and technical excellence as the pillars of every project."
+      },
+      {
+        "eyebrow": "Our values",
+        "title": "Design that inspires, code that works",
+        "desc": "Our commitment is to help you grow in the digital world with solid technology and design that feels tailor-made for you."
+      }
+    ]
+  },
+  "Contact": {
+    "eyebrow": "Let's talk 🚀",
+    "title": "Tell us what you want to build.",
+    "subtitle": "Leave us a message and we'll get back to you as soon as possible to talk about how to move your project forward.",
+    "form": {
+      "nameLabel": "Name",
+      "namePlaceholder": "What's your name?",
+      "emailLabel": "Email",
+      "emailPlaceholder": "you@email.com",
+      "messageLabel": "Message",
+      "messagePlaceholder": "Tell us briefly about your project...",
+      "submit": "Send message",
+      "submitted": "Message sent!"
+    },
+    "info": [
+      {
+        "title": "Call us",
+        "desc": "Talk directly with our team."
+      },
+      {
+        "title": "WhatsApp",
+        "desc": "Fast response for quotes."
+      },
+      {
+        "title": "Email us",
+        "desc": "For general questions and quotes."
+      }
+    ]
+  },
+  "Footer": {
+    "rights": "© 2024 Aitera Tech. All rights reserved."
   }
 }
