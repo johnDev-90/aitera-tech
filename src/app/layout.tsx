@@ -1,10 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { NextIntlClientProvider } from "next-intl";
-
-type Prosp = {
-  children: React.ReactNode;
-}
+import { getLocale } from "next-intl/server";
 
 export const metadata: Metadata = {
   title: "Aitera Tech — Software que convierte ideas en producto",
@@ -15,13 +12,15 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const locale = await getLocale();
+
   return (
-    <html lang="es">
+    <html lang={locale}>
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
