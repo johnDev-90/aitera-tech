@@ -129,7 +129,9 @@
       "messageLabel": "Message",
       "messagePlaceholder": "Tell us briefly about your project...",
       "submit": "Send message",
-      "submitted": "Message sent!"
+      "sending": "Sending...",
+      "submitted": "Message sent!",
+      "error": "Something went wrong. Please try again."
     },
     "info": [
       {
