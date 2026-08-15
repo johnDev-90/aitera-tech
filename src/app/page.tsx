@@ -43,8 +43,8 @@ const CONTACT_ICON_PATHS = [
 ];
 
 const CONTACT_LINKS = [
-  { href: "tel:+50360244779", label: "+(503) 6024-4779" },
-  { href: "", label: "+(503) 6024-4779" },
+  { href: "tel:+50375490127", label: "+(503) 7549-0127" },
+  { href: "", label: "+(503) 7549-0127" },
   { href: "mailto:info@aiteratech.com", label: "info@aiteratech.com" },
 ];
 
@@ -58,7 +58,7 @@ export default function Home() {
   const tContact = useTranslations("Contact");
   const tFooter = useTranslations("Footer");
 
-  const waHref = `https://wa.me/50360244779?text=${encodeURIComponent(tWa("message"))}`;
+  const waHref = `https://wa.me/50375490127?text=${encodeURIComponent(tWa("message"))}`;
   const processSteps = tProcess.raw("steps") as Step[];
   const serviceCards = tServices.raw("cards") as ServiceCard[];
   const aboutCells = tAbout.raw("cells") as AboutCell[];
@@ -142,18 +142,40 @@ export default function Home() {
     });
 
     const form = document.getElementById("contactForm") as HTMLFormElement | null;
-    const handleSubmit = (e: Event) => {
+    const handleSubmit = async (e: Event) => {
       e.preventDefault();
       const btn = form?.querySelector("button") as HTMLButtonElement | null;
-      if (!btn) return;
+      if (!form || !btn) return;
+
+      const formData = new FormData(form);
+      const name = String(formData.get("name") ?? "");
+      const email = String(formData.get("email") ?? "");
+      const message = String(formData.get("message") ?? "");
+
       const original = btn.textContent;
-      btn.textContent = tContact("form.submitted");
+      btn.disabled = true;
+      btn.textContent = tContact("form.sending");
       btn.style.opacity = "0.85";
-      setTimeout(() => {
-        btn.textContent = original;
-        btn.style.opacity = "1";
-        form?.reset();
-      }, 2600);
+
+      try {
+        const res = await fetch("/api/send", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ name, email, message }),
+        });
+        if (!res.ok) throw new Error("request failed");
+
+        btn.textContent = tContact("form.submitted");
+        form.reset();
+      } catch {
+        btn.textContent = tContact("form.error");
+      } finally {
+        setTimeout(() => {
+          btn.textContent = original;
+          btn.style.opacity = "1";
+          btn.disabled = false;
+        }, 2600);
+      }
     };
     form?.addEventListener("submit", handleSubmit);
 

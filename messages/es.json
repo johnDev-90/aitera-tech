@@ -129,7 +129,9 @@
       "messageLabel": "Mensaje",
       "messagePlaceholder": "Cuéntanos brevemente tu proyecto...",
       "submit": "Enviar mensaje",
-      "submitted": "¡Mensaje enviado!"
+      "sending": "Enviando...",
+      "submitted": "¡Mensaje enviado!",
+      "error": "Algo salió mal. Inténtalo de nuevo."
     },
     "info": [
       {
