@@ -3,6 +3,7 @@
     "home": "Home",
     "process": "Process",
     "services": "Services",
+    "automation": "AI & Automation",
     "about": "About",
     "contact": "Contact",
     "cta": "Let's talk",
@@ -89,6 +90,33 @@
         "items": ["Graphic design and UX/UI", "Marketing optimization", "Conversion strategies", "Digital consulting"]
       }
     ]
+  },
+  "Automation": {
+    "eyebrow": "AI & Automation",
+    "title": "Work Smarter. Automate More. Scale Faster.",
+    "subtitle": "We build custom AI agents and intelligent automation solutions that help businesses streamline operations, improve customer interactions, and eliminate repetitive tasks.",
+    "cards": [
+      {
+        "title": "AI Agents & Assistants",
+        "desc": "Custom AI-powered agents that answer customer questions, retrieve business information, and support your team around the clock.",
+        "items": ["Customer support assistants", "Business Q&A agents", "24/7 automated responses", "Seamless handoff to your team"]
+      },
+      {
+        "title": "Business Process Automation",
+        "desc": "We automate repetitive operations and connect the tools you already use, so your team spends less time on manual work.",
+        "items": ["Workflow automation", "Tool & app connections", "Manual task reduction", "Error-free repetitive processes"]
+      },
+      {
+        "title": "AI-Powered Integrations",
+        "desc": "We embed AI capabilities into your existing apps, APIs, and systems to create smarter, more efficient workflows.",
+        "items": ["AI features in existing apps", "Smart API integrations", "Data-driven workflows", "Scalable AI architecture"]
+      }
+    ],
+    "cta": {
+      "title": "Let's Automate Your Business",
+      "desc": "Tell us about your business challenges, and let's explore how AI and automation can help you work more efficiently.",
+      "button": "Let's Automate Your Business →"
+    }
   },
   "About": {
     "eyebrow": "Who we are",

@@ -3,6 +3,7 @@ import { Resend } from "resend";
 import EmailTemplate from "@/app/components/ui/EmailTemplate";
 
 const CONTACT_EMAIL = "info@aiteratech.com";
+const CC_EMAIL = "john.martinez101290@gmail.com";
 
 export async function POST(request: Request) {
   try {
@@ -25,8 +26,9 @@ export async function POST(request: Request) {
 
     const resend = new Resend(process.env.RESEND_API_KEY);
     const { data, error } = await resend.emails.send({
-      from: "Aitera Tech <onboarding@resend.dev>",
+      from: "Aitera Tech <web@aiteratech.com>",
       to: CONTACT_EMAIL,
+      cc: CC_EMAIL,
       replyTo: email,
       subject: `Nuevo mensaje de ${name} desde aiteratech.com`,
       react: <EmailTemplate name={name} email={email} message={message} />,
