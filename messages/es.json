@@ -3,6 +3,7 @@
     "home": "Inicio",
     "process": "Proceso",
     "services": "Servicios",
+    "automation": "IA y Automatización",
     "about": "Nosotros",
     "contact": "Contacto",
     "cta": "Hablemos",
@@ -89,6 +90,33 @@
         "items": ["Diseño gráfico y UX/UI", "Optimización de marketing", "Estrategias de conversión", "Consultoría digital"]
       }
     ]
+  },
+  "Automation": {
+    "eyebrow": "IA y Automatización",
+    "title": "Trabaja más inteligente. Automatiza más. Escala más rápido.",
+    "subtitle": "Creamos agentes de IA personalizados y soluciones de automatización inteligente que ayudan a las empresas a optimizar operaciones, mejorar la interacción con sus clientes y eliminar tareas repetitivas.",
+    "cards": [
+      {
+        "title": "Agentes y Asistentes de IA",
+        "desc": "Agentes de IA a la medida que responden preguntas de tus clientes, consultan información de tu negocio y apoyan a tu equipo todo el día.",
+        "items": ["Asistentes de atención al cliente", "Agentes de preguntas frecuentes", "Respuestas automatizadas 24/7", "Transferencia fluida a tu equipo"]
+      },
+      {
+        "title": "Automatización de Procesos",
+        "desc": "Automatizamos operaciones repetitivas y conectamos las herramientas que ya usas, para que tu equipo dedique menos tiempo a tareas manuales.",
+        "items": ["Automatización de flujos de trabajo", "Conexión entre herramientas", "Reducción de tareas manuales", "Procesos repetitivos sin errores"]
+      },
+      {
+        "title": "Integraciones con IA",
+        "desc": "Integramos capacidades de IA en tus aplicaciones, APIs y sistemas actuales para crear flujos de trabajo más inteligentes y eficientes.",
+        "items": ["IA dentro de tus apps actuales", "Integraciones inteligentes vía API", "Flujos de trabajo basados en datos", "Arquitectura de IA escalable"]
+      }
+    ],
+    "cta": {
+      "title": "Automaticemos tu Negocio",
+      "desc": "Cuéntanos los retos de tu negocio y exploremos juntos cómo la IA y la automatización pueden ayudarte a trabajar de forma más eficiente.",
+      "button": "Automaticemos tu Negocio →"
+    }
   },
   "About": {
     "eyebrow": "Quiénes somos",

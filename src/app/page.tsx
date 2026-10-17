@@ -10,6 +10,8 @@ type ServiceCard = { title: string; desc: string; items: string[] };
 type AboutCell = { eyebrow: string; title: string; desc: string };
 type ContactInfo = { title: string; desc: string };
 
+type AutomationCard = { title: string; desc: string; items: string[] };
+
 const SERVICE_ICON_PATHS = [
   <React.Fragment key="websites">
     <rect x="3" y="4" width="18" height="16" rx="2" />
@@ -25,6 +27,24 @@ const SERVICE_ICON_PATHS = [
     key="design"
     d="M12 2l2.4 6.6L21 11l-6.6 2.4L12 20l-2.4-6.6L3 11l6.6-2.4z"
   />,
+];
+
+const AUTOMATION_ICON_PATHS = [
+  <React.Fragment key="ai-agents">
+    <rect x="4" y="8" width="16" height="10" rx="3" />
+    <circle cx="12" cy="13" r="2.4" />
+    <path d="M12 8V4M9 4h6" />
+  </React.Fragment>,
+  <React.Fragment key="automation">
+    <circle cx="5" cy="6" r="2.3" />
+    <circle cx="19" cy="6" r="2.3" />
+    <circle cx="12" cy="18" r="2.3" />
+    <path d="M7 7.3L10 16M17 7.3L14 16" />
+  </React.Fragment>,
+  <React.Fragment key="ai-integrations">
+    <circle cx="9" cy="12" r="6" />
+    <circle cx="15" cy="12" r="6" />
+  </React.Fragment>,
 ];
 
 const CONTACT_ICON_PATHS = [
@@ -43,8 +63,8 @@ const CONTACT_ICON_PATHS = [
 ];
 
 const CONTACT_LINKS = [
-  { href: "tel:+50375490127", label: "+(503) 7549-0127" },
-  { href: "", label: "+(503) 7549-0127" },
+  { href: "tel:+50374848876", label: "+(503) 7484-8876" },
+  { href: "", label: "+(503) 7484-8876" },
   { href: "mailto:info@aiteratech.com", label: "info@aiteratech.com" },
 ];
 
@@ -54,13 +74,15 @@ export default function Home() {
   const tHero = useTranslations("Hero");
   const tProcess = useTranslations("Process");
   const tServices = useTranslations("Services");
+  const tAutomation = useTranslations("Automation");
   const tAbout = useTranslations("About");
   const tContact = useTranslations("Contact");
   const tFooter = useTranslations("Footer");
 
-  const waHref = `https://wa.me/50375490127?text=${encodeURIComponent(tWa("message"))}`;
+  const waHref = `https://wa.me/50374848876?text=${encodeURIComponent(tWa("message"))}`;
   const processSteps = tProcess.raw("steps") as Step[];
   const serviceCards = tServices.raw("cards") as ServiceCard[];
+  const automationCards = tAutomation.raw("cards") as AutomationCard[];
   const aboutCells = tAbout.raw("cells") as AboutCell[];
   const contactInfo = tContact.raw("info") as ContactInfo[];
 
@@ -223,10 +245,13 @@ export default function Home() {
               <a href="#home">{tNav("home")}</a>
             </li>
             <li>
-              <a href="#solutions">{tNav("process")}</a>
+              <a href="#services">{tNav("services")}</a>
             </li>
             <li>
-              <a href="#services">{tNav("services")}</a>
+              <a href="#automation">{tNav("automation")}</a>
+            </li>
+            <li>
+              <a href="#solutions">{tNav("process")}</a>
             </li>
             <li>
               <a href="#nosotros">{tNav("about")}</a>
@@ -364,33 +389,6 @@ export default function Home() {
           </svg>
         </div>
 
-        {/* PROCESO */}
-        <section className="process" id="solutions">
-          <div className="wrap">
-            <div className="process-head reveal">
-              <div>
-                <span className="eyebrow">{tProcess("eyebrow")}</span>
-                <h2 className="section-title">{tProcess("title")}</h2>
-              </div>
-              <p className="section-sub">{tProcess("subtitle")}</p>
-            </div>
-
-            <div className="process-list">
-              {processSteps.map((step, i) => (
-                <div className="process-item reveal" key={step.title}>
-                  <div className="process-num">
-                    {String(i + 1).padStart(2, "0")}
-                  </div>
-                  <div className="process-body">
-                    <h3>{step.title}</h3>
-                    <p>{step.desc}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
         {/* SERVICIOS */}
         <section className="services" id="services">
           <div className="wrap">
@@ -420,6 +418,78 @@ export default function Home() {
                       <li key={item}>{item}</li>
                     ))}
                   </ul>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* IA Y AUTOMATIZACIÓN */}
+        <section className="automation" id="automation">
+          <div className="wrap">
+            <div className="reveal">
+              <span className="eyebrow">{tAutomation("eyebrow")}</span>
+              <h2 className="section-title">{tAutomation("title")}</h2>
+              <p className="section-sub">{tAutomation("subtitle")}</p>
+            </div>
+
+            <div className="automation-grid">
+              {automationCards.map((card, i) => (
+                <div className="card reveal" key={card.title}>
+                  <div className="card-icon">
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="1.8"
+                    >
+                      {AUTOMATION_ICON_PATHS[i]}
+                    </svg>
+                  </div>
+                  <h3>{card.title}</h3>
+                  <p>{card.desc}</p>
+                  <ul>
+                    {card.items.map((item) => (
+                      <li key={item}>{item}</li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+
+            <div className="automation-cta reveal">
+              <div className="automation-cta-text">
+                <h3>{tAutomation("cta.title")}</h3>
+                <p>{tAutomation("cta.desc")}</p>
+              </div>
+              <a href="#contact" className="btn btn-primary">
+                {tAutomation("cta.button")}
+              </a>
+            </div>
+          </div>
+        </section>
+
+        {/* PROCESO */}
+        <section className="process" id="solutions">
+          <div className="wrap">
+            <div className="process-head reveal">
+              <div>
+                <span className="eyebrow">{tProcess("eyebrow")}</span>
+                <h2 className="section-title">{tProcess("title")}</h2>
+              </div>
+              <p className="section-sub">{tProcess("subtitle")}</p>
+            </div>
+
+            <div className="process-list">
+              {processSteps.map((step, i) => (
+                <div className="process-item reveal" key={step.title}>
+                  <div className="process-num">
+                    {String(i + 1).padStart(2, "0")}
+                  </div>
+                  <div className="process-body">
+                    <h3>{step.title}</h3>
+                    <p>{step.desc}</p>
+                  </div>
                 </div>
               ))}
             </div>
